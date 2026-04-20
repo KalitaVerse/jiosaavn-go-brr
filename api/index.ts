@@ -1,7 +1,4 @@
-package handler
+import { handle } from '@hono/node-server/vercel'
+import app from '../src/server'
 
-import "net/http"
-
-func Handler(w http.ResponseWriter, r *http.Request) {
-    w.Write([]byte("Hello!"))
-}
+export default handle(app)
